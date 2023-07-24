@@ -49,10 +49,10 @@ textarea::placeholder {
 }
 
 a:link {
-    color: dodgerblue;
+    color: rgb(104, 180, 255);
 }
 a:visited {
-    color: mediumpurple;
+    color: rgb(164, 141, 209);
 }
 a:active {
     color: grey;
@@ -174,7 +174,7 @@ a:active {
     font-weight: normal;
     overflow: hidden;
     transition: max-height 0.25s ease-in-out;
-    max-height: calc(15px + 0.2em);
+    /* max-height: calc(15px + 0.2em); */
 }
 
 .output_status {

@@ -3,3 +3,4 @@ TODO
 [] Add logo
 [] Make sure all links are functional
 [] Fill out sheep herding section
+[] Add loads of pictures

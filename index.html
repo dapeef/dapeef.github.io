@@ -20,10 +20,9 @@
                     <div class="collapsible_container">
                         <button class="collapsible">
                             Website
-                            <div class="description" style="max-height: calc(15px + 0.2em);">
+                            <div class="description">
                                 The website you're looking at now
                             </div>
-                            <div class="output_status" style="max-height: 0px;">Processing data...</div>
                         </button>
                         <div class="collapsible_content">
                             <div class="mini_header">Awesome sub-title</div>
@@ -38,10 +37,9 @@
                     <div class="collapsible_container">
                         <button class="collapsible">
                             Bish Bash COSHH
-                            <div class="description" style="max-height: calc(15px + 0.2em);">
+                            <div class="description">
                                 A website to help chemists create COSHH forms for their experiments 
                             </div>
-                            <div class="output_status" style="max-height: 0px;">Processing data...</div>
                         </button>
                         <div class="collapsible_content">
                             <div class="mini_header">Motivation</div>
@@ -67,10 +65,9 @@
                     <div class="collapsible_container">
                         <button class="collapsible">
                             Drone Assisted Sheep Herding (DASH)
-                            <div class="description" style="max-height: calc(15px + 0.2em);">
+                            <div class="description">
                                 Software to simulate sheep behaviour in the presence of drones, and the UI with which a farmer might control the herding process
                             </div>
-                            <div class="output_status" style="max-height: 0px;">Processing data...</div>
                         </button>
                         <div class="collapsible_content">
                             <div class="mini_header">Motivation</div>
@@ -81,9 +78,45 @@
                             My role in this project was to create a simulation environment...
 
                             <div class="mini_header">UI</div>
-                            My other role role was to create a User Interface with which a farmer might control the drone herding process.
+                            My other role was to create a User Interface with which a farmer might control the drone herding process.
                             
                             <div class="mini_header">The full report can be found <a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/compound/887">here</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Chicken Monitor -->
+                    <div class="collapsible_container">
+                        <button class="collapsible">
+                            Chicken egg monitor
+                            <div class="description">
+                                A script to detect, monitor and display when chickens have laid eggs and how heavy they are
+                            </div>
+                        </button>
+                        <div class="collapsible_content">
+                            <div class="mini_header">Motivation</div>
+                            As well as sheep, we have chickens. It's a nuisance to have to repeatedly check during the day whether there are eggs ready for collection;
+                                this tool was designed to combat that issue. As well as that, this tool could be expanded to identify which chicken has laid which egg -
+                                more on that in the "Further development section".
+
+                            <div class="mini_header">Solution</div>
+                            This tool takes advantage of a digital weighing scale connected to a Raspberry Pi which can be fitted underneath the egg collection area.
+                                All eggs laid in the nesting box roll into the egg collection area, causing a step change in weight recorded by the scales.
+                                This step can be recorded and measured to identify the timestamp and mass of the egg.
+                            <p>
+                            This information can then be accessed via an HTML front end hosted by the Raspberry Pi. This means that the site can be accessed
+                                from outside the house, with the port forwarding and DNS settings configured.
+                            
+                            <div class="mini_header">Further development</div>
+                            I'd like to expand this project to include an RFID sensor in the nesting box, in conjuction with RFID leg bands on the chickens, to detect
+                                which chicken lays which eggs. This would prove useful to detect which chickens are off lay or ill, leading to improved flock management.
+                            
+                            <p>
+                            It would also be nice to integrate an programmable pop-hole closing system, handled by the same Raspberry Pi. The chickens need to be let
+                            out near sunrise, which gets particularly early during the summer; this tool would allow the door to be opened at a preprogrammed time
+                            (or be triggered by a light sensor), removing the need to wake up so early. This could also be used in
+                            conjuction with a couple of RFID sensors to ensure all chickens are inside the house before the door is closed for the night.
+                            
+                            <div class="mini_header"><a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/compound/887">GitHub page</a></div>
                         </div>
                     </div>
 
