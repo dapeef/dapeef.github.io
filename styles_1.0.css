@@ -14,7 +14,7 @@ body {
 
 h1 {
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 10mm;
 }
 
 h2 {
@@ -137,7 +137,7 @@ a:active {
     padding: 0;
     margin: 2mm;
     text-align: left;
-    opacity: 0; 
+    opacity: 1; 
     transition: padding 0.25s, border 0.25s, opacity 0.5s;
 }
 
@@ -169,12 +169,12 @@ a:active {
     font-size: small;
 }
 
-.dictated_name {
-    font-size: medium;
+.description {
+    font-size: small;
     font-weight: normal;
     overflow: hidden;
     transition: max-height 0.25s ease-in-out;
-    max-height: 0;
+    max-height: calc(15px + 0.2em);
 }
 
 .output_status {
@@ -187,12 +187,12 @@ a:active {
 
 .mini_header {
     /* font-style: italic; */
-    margin-top: 4mm;
+    margin-top: 2mm;
     font-size: medium;
     font-weight: bold;
 }
 
-.multiline {
+/* .multiline {
     white-space: pre-wrap;
     margin-top: 1mm;
     word-wrap: break-word;
@@ -201,7 +201,7 @@ a:active {
     color: black;
     border-radius: 1mm;
     padding: 1mm;
-}
+} */
 
 .plain_text {
     padding: 0;
