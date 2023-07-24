@@ -26,13 +26,43 @@
                             <div class="output_status" style="max-height: 0px;">Processing data...</div>
                         </button>
                         <div class="collapsible_content">
-                            <div class="mini_header">Main Hazards</div>
+                            <div class="mini_header">Awesome sub-title</div>
                             Wordy words. Epic and cool!
                             <p>
                             doop blerb
                             <div class="mini_header"><a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/compound/887">GitHub page</a></div>
                         </div>
                     </div>
+
+                    <!-- Bish Bash COSHH -->
+                    <div class="collapsible_container">
+                        <button class="collapsible">
+                            Bish Bash COSHH
+                            <div class="description" style="max-height: calc(15px + 0.2em);">
+                                A website to help chemists create COSHH forms for their experiments 
+                            </div>
+                            <div class="output_status" style="max-height: 0px;">Processing data...</div>
+                        </button>
+                        <div class="collapsible_content">
+                            <div class="mini_header">Motivation</div>
+                            This project was motivated by repeated complaints from my chemist friends having to create a COSHH (Control Of Substances Hazardous to Health)
+                                form for each of their experiments. Their previous work flow required searching a chemical database website
+                                (<a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>) for their chemical, scrolling
+                                to find the hazards, then writing them out manually (the website disallowed copy and paste).
+                            <p>
+                            My response "surely it can be automated" was met with "no this is the only way". That was enough motivation...
+                            <div class="mini_header">Solution</div>
+                            <a target="_blank" href="https://dapeef.github.io/coshh/">My website</a> makes use of two of
+                                <a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>'s APIs; their search API is used to get the chemical's
+                                unique ID, which is then used in a request to <a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>'s main API
+                                to get in-depth information about the chemical. This information is then parsed to extract the hazard information, as well as
+                                other useful information like boiling point and molecular weight. My site further processes the hazard codes, removing redundant
+                                codes (for example, rejecting "Causes skin irritation" when "Causes serious skin irritation" is also present).
+                            <div class="mini_header"><a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/compound/887">GitHub page</a></div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
