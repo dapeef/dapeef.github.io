@@ -4,3 +4,5 @@ TODO
 [] Make sure all links are functional
 [] Fill out sheep herding section
 [] Add loads of pictures
+[] Add dates to projects
+[] Add title at top of box
