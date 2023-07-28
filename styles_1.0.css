@@ -19,10 +19,19 @@ h1 {
 
 h2 {
     text-align: center;
-    font-weight: normal;
+    font-weight: bold;
     font-size: medium;
     margin-bottom: 10mm;
     margin-top: 2mm;
+}
+
+h3 {
+    text-align: left;
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: 2mm;
+    margin-top: 0;
+    margin-left: 2mm;
 }
 
 button {
