@@ -6,3 +6,4 @@ TODO
 [] Add loads of pictures
 [] Add dates to projects
 [] Add title at top of box
+[] Address Bish Bash COSHH's github link not appearing
