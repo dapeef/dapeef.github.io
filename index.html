@@ -32,9 +32,12 @@
                         </button>
                         <div class="collapsible_content">
                             <div class="mini_header">Awesome sub-title</div>
-                            Wordy words. Epic and cool!
                             <p>
-                            doop blerb
+                                Wordy words. Epic and cool!
+                            </p>
+                            <p>
+                                doop blerb
+                            </p>
                             <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/home-page">GitHub page</a></div>
                         </div>
                     </div>
@@ -49,20 +52,25 @@
                         </button>
                         <div class="collapsible_content">
                             <div class="mini_header">Motivation</div>
-                            This project was motivated by repeated complaints from my chemist friends having to create a COSHH (Control Of Substances Hazardous to Health)
+                            <p>
+                                This project was motivated by repeated complaints from my chemist friends having to create a COSHH (Control Of Substances Hazardous to Health)
                                 form for each of their experiments. Their previous work flow required searching a chemical database website
                                 (<a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>) for their chemical, scrolling
                                 to find the hazards, then writing them out manually (the website disallowed copy and paste).
+                            </p>
                             <p>
-                            My response "surely it can be automated" was met with "no this is the only way". That was enough motivation...
+                                My response "surely it can be automated" was met with "no, this is the only way". That was enough motivation...
+                            </p>
 
                             <div class="mini_header">Solution</div>
-                            <a target="_blank" href="https://dapeef.github.io/coshh/">My website</a> makes use of two of
+                            <p>
+                                <a target="_blank" href="https://dapeef.github.io/coshh/">My website</a> makes use of two of
                                 <a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>'s APIs; their search API is used to get the chemical's
                                 unique ID, which is then used in a request to <a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>'s main API
                                 to get in-depth information about the chemical. This information is then parsed to extract the hazard information, as well as
                                 other useful information like boiling point and molecular weight. My site further processes the hazard codes, removing redundant
                                 codes (for example, rejecting "Causes skin irritation" when "Causes serious skin irritation" is also present).
+                            </p>
                             
                             <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/bish-bash-coshh">GitHub page</a></div>
                         </div>
@@ -78,14 +86,20 @@
                         </button>
                         <div class="collapsible_content">
                             <div class="mini_header">Motivation</div>
-                            This project was made as part of my 3rd year engineering group project. The brief was to "Create a multi-agent drone system". My group
+                            <p>
+                                This project was made as part of my 3rd year engineering group project. The brief was to "Create a multi-agent drone system". My group
                                 chose to create a sheep herding system; it's a novel and relatively unresearched area, and I also have a personal interest (we own sheep).
+                            </p>
 
                             <div class="mini_header">Simulation environment</div>
-                            My role in this project was to create a simulation environment...
+                            <p>
+                                My role in this project was to create a simulation environment...
+                            </p>
 
                             <div class="mini_header">UI</div>
-                            My other role was to create a User Interface with which a farmer might control the drone herding process.
+                            <p>
+                                My other role was to create a User Interface with which a farmer might control the drone herding process.
+                            </p>
                             
                             <div class="mini_header">The full report can be found
                                 <a target="_blank" href="https://drive.google.com/file/d/1OZmbmCxMcFP45Pimwzf1wZyLFN9SBxjT/view?usp=sharing">here</a></div>
@@ -102,28 +116,35 @@
                         </button>
                         <div class="collapsible_content">
                             <div class="mini_header">Motivation</div>
-                            As well as sheep, we have chickens. It's a nuisance to have to repeatedly check during the day whether there are eggs ready for collection;
+                            <p>
+                                As well as sheep, we have chickens. It's a nuisance to have to repeatedly check during the day whether there are eggs ready for collection;
                                 this tool was designed to combat that issue. As well as that, this tool could be expanded to identify which chicken has laid which egg -
                                 more on that in the "Further development section".
+                            </p>
 
                             <div class="mini_header">Solution</div>
-                            This tool takes advantage of a digital weighing scale connected to a Raspberry Pi which can be fitted underneath the egg collection area.
+                            <p>
+                                This tool takes advantage of a digital weighing scale connected to a Raspberry Pi which can be fitted underneath the egg collection area.
                                 All eggs laid in the nesting box roll into the egg collection area, causing a step change in weight recorded by the scales.
                                 This step can be recorded and measured to identify the timestamp and mass of the egg.
+                            </p>
                             <p>
-                            This information can then be accessed via an HTML front end hosted by the Raspberry Pi. This means that the site can be accessed
+                                This information can then be accessed via an HTML front end hosted by the Raspberry Pi. This means that the site can be accessed
                                 from outside the house, with the port forwarding and DNS settings configured.
+                            </p>
                             
                             <div class="mini_header">Further development</div>
-                            I'd like to expand this project to include an RFID sensor in the nesting box, in conjuction with RFID leg bands on the chickens, to detect
-                                which chicken lays which eggs. This would prove useful to detect which chickens are off lay or ill, leading to improved flock management.
-                            
                             <p>
-                            It would also be nice to integrate an programmable pop-hole closing system, handled by the same Raspberry Pi. The chickens need to be let
-                            out near sunrise, which gets particularly early during the summer; this tool would allow the door to be opened at a preprogrammed time
-                            (or be triggered by a light sensor), removing the need to wake up so early. This could also be used in
-                            conjuction with a couple of RFID sensors to ensure all chickens are inside the house before the door is closed for the night.
-                            
+                                I'd like to expand this project to include an RFID sensor in the nesting box, in conjuction with RFID leg bands on the chickens, to detect
+                                which chicken lays which eggs. This would prove useful to detect which chickens are off lay or ill, leading to improved flock management.
+                            </p>
+                            <p>
+                                It would also be nice to integrate an programmable pop-hole closing system, handled by the same Raspberry Pi. The chickens need to be let
+                                out near sunrise, which gets particularly early during the summer; this tool would allow the door to be opened at a preprogrammed time
+                                (or be triggered by a light sensor), removing the need to wake up so early. This could also be used in
+                                conjuction with a couple of RFID sensors to ensure all chickens are inside the house before the door is closed for the night.
+                            </p>
+
                             <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/chicken-monitor">GitHub page</a></div>
                         </div>
                     </div>
@@ -138,9 +159,15 @@
                         </button>
                         <div class="collapsible_content">
                             <div class="mini_header">Motivation</div>
+                            <p>
+
+                            </p>
                             
 
                             <div class="mini_header">Solution</div>
+                            <p>
+
+                            </p>
                         
                             
                             <!-- <div class="mini_header"><a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/compound/887">GitHub page</a></div> -->
@@ -157,15 +184,23 @@
                         </button>
                         <div class="collapsible_content">
                             <div class="mini_header">Motivation</div>
-                            
+                            <p>
+
+                            </p>
 
                             <div class="mini_header">Solution</div>
-                        
+                            <p>
+
+                            </p>
                             
                             <!-- <div class="mini_header"><a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/compound/887">GitHub page</a></div> -->
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="copyright">
+                © Alistair White-Horne 2023
             </div>
         </div>
 

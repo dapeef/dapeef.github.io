@@ -72,6 +72,21 @@ a:active {
     width: auto;
 } */
 
+p {
+    margin-top: 0;
+    margin-bottom: 4mm;
+}
+
+img {
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0 solid white;
+    border-radius: 2mm;
+    border-width: 1px;
+}
+
 .box {
     display: flex;
     flex-flow: column;
@@ -118,7 +133,7 @@ a:active {
     height: 500px;
     width: 100%;
     flex: 1 1 auto;
-    margin-bottom: 1cm;
+    margin-bottom: 2mm;
 }
 .output_container {
     font-size: medium;
@@ -219,4 +234,10 @@ a:active {
     border-radius: 0;
     background-color: transparent;
     color: black;
+}
+
+.copyright {
+    text-align: center;
+    padding-bottom: 2mm;
+    padding-top: 2mm;
 }
