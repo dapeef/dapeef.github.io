@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    background-color: rgb(44, 44, 44);
+    background-color: #46244d;
     align-items: center;
     color: white;
-    font-size: medium;
+    font-size: large;
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     height: 100%;
     margin: 0;
@@ -15,6 +15,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 10mm;
+    font-size: xxx-large;
 }
 
 h2 {
@@ -29,7 +30,7 @@ h3 {
     text-align: left;
     font-weight: bold;
     font-size: xx-large;
-    margin-bottom: 2mm;
+    margin-bottom: 0;
     margin-top: 0;
     margin-left: 2mm;
 }
@@ -122,6 +123,7 @@ a:active {
 .output_container {
     font-size: medium;
     overflow-y: auto;
+    background-color: #613267;
 }
 
 .go_button {
@@ -157,7 +159,7 @@ a:active {
     text-align: left;
     transition-duration: 0.3s;
     padding: 2mm;
-    font-size: large;
+    font-size: x-large;
     width: 100%;
 }
 .collapsible:hover {
@@ -175,11 +177,11 @@ a:active {
     overflow: hidden;
     transition: max-height 0.25s ease-in-out;
     font-weight: normal;
-    font-size: small;
+    font-size: medium;
 }
 
 .description {
-    font-size: small;
+    font-size: medium;
     font-weight: normal;
     overflow: hidden;
     transition: max-height 0.25s ease-in-out;
@@ -197,7 +199,7 @@ a:active {
 .mini_header {
     /* font-style: italic; */
     margin-top: 2mm;
-    font-size: medium;
+    font-size: larger;
     font-weight: bold;
 }
 
