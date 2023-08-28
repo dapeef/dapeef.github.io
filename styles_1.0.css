@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #46244d;
+    background-color: #000000;
     align-items: center;
     color: white;
     font-size: large;
@@ -14,25 +14,26 @@ body {
 
 h1 {
     text-align: center;
-    margin-bottom: 10mm;
     font-size: xxx-large;
+    margin-bottom: 0;
 }
 
 h2 {
     text-align: center;
     font-weight: bold;
-    font-size: medium;
-    margin-bottom: 10mm;
-    margin-top: 2mm;
+    font-size: large;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 h3 {
     text-align: left;
     font-weight: bold;
     font-size: xx-large;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-bottom: 2mm;
+    margin-top: 5mm;
     margin-left: 2mm;
+    text-align: center;
 }
 
 button {
@@ -87,6 +88,10 @@ img {
     border-width: 1px;
 }
 
+hr {
+    margin: 2px 2mm 2px 2mm;
+}
+
 .box {
     display: flex;
     flex-flow: column;
@@ -133,12 +138,13 @@ img {
     height: 500px;
     width: 100%;
     flex: 1 1 auto;
+    margin-top: 1cm;
     margin-bottom: 2mm;
 }
 .output_container {
     font-size: medium;
     overflow-y: auto;
-    background-color: #613267;
+    background-color: #2d003d;
 }
 
 .go_button {
@@ -216,6 +222,10 @@ img {
     margin-top: 2mm;
     font-size: larger;
     font-weight: bold;
+}
+
+.double_line {
+    margin: 1.5cm 0 1.5cm 0;
 }
 
 /* .multiline {

@@ -12,13 +12,45 @@
     <body>
         <div class="box">
             <h1>Alistair White-Horne</h1>
-            <!-- <h2>created by Alistair White-Horne</h2> -->
+            <h2>
+                <a target="_blank" href="https://github.com/dapeef/">GitHub</a>
+                <span>&#183;</span>
+                <a target="_blank" href="https://www.linkedin.com/in/alistair-white-horne-4592bb200/">LinkedIn</a>
+                <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/alistair.wh/">Facebook</a>
+            </h2>
 
             <div class="output_container_outer border main_frame">
                 <div id="output_container" class="output_container">
+                    <h3>Welcome!</h3>
+                    <p style="margin-left: 2mm;">
+                        Hello, internet traveller, and welcome to my website! This is a place for me to collect my hobbyist coding projects.
+                        It is all entirely my own work; the projects as well as all the web design.
+                    </p>
+                    <p style="margin-left: 2mm;">
+                        My projects are mostly just a bit of fun; making computers do cool things or to make tools to make life slightly easier.
+                        Mixed in are also some projects which I've done as part of my degree.
+                    </p>
+                    <p style="margin-left: 2mm;">
+                        I'm a 4th year at Somerville College, Oxford, studying Engineering Science. I specialise in software/computer engineering,
+                        as well as civil/geotechnic engineering. I'm known around the internet as "dapeef".
+                    </p>
+                    <p style="margin-left: 2mm;">
+                        Outside of my degree I play bass trombone, ring church bells and play pool/snooker with the university.
+                        I'm also a member of Oxford University Air Squadron, an RAF volunteer reserve organisation for university students.
+                    </p>
+
+                    <div class="double_line">
+                        <hr>
+                        <hr>
+                    </div>
+
+
+
+
                     <h3>Projects:</h3>
 
-                    <div class="description", style="margin-left: 2mm; margin-bottom: 4mm;">
+                    <div class="description", style="margin-left: 2mm; margin-bottom: 4mm; text-align: center;">
                         Click the projects below to see more information
                     </div>
 
@@ -31,12 +63,9 @@
                             </div>
                         </button>
                         <div class="collapsible_content">
-                            <div class="mini_header">Awesome sub-title</div>
-                            <p>
-                                Wordy words. Epic and cool!
-                            </p>
-                            <p>
-                                doop blerb
+                            <p style="margin-top: 2mm;">
+                                As mentioned in my Welcome section, this website is for me to display my coding projects that I've worked on during the last few years.
+                                I built it myself from the bottom up; my other websites are based on the same basic framework.
                             </p>
                             <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/home-page">GitHub page</a></div>
                         </div>
@@ -89,18 +118,37 @@
                         <div class="collapsible_content">
                             <div class="mini_header">Motivation</div>
                             <p>
-                                This project was made as part of my 3rd year engineering group project. The brief was to "Create a multi-agent drone system". My group
+                                This software was made as part of my 3rd year engineering group project. The brief was to "Create a multi-agent drone system". My group
                                 chose to create a sheep herding system; it's a novel and relatively unresearched area, and I also have a personal interest (we own sheep).
                             </p>
 
                             <div class="mini_header">Simulation environment</div>
                             <p>
-                                My role in this project was to create a simulation environment...
+                                Part of my role in this project was to create a simulation environment to predict the sheep's response to drones.
+                            </p>
+                            <p>
+                                Initially, the drone path planning algorithm was planned to be a reinforcement learnt algorithm,
+                                which would require a large dataset. The simulation would act as an infinite dataset for the algorithm
+                                to train with; new data could be generated on-demand.
+                            </p>
+                            <p>
+                                Even after the reinforcement learning strategy was dismissed, a simulation environment was still
+                                required to validate the drone path planning algorithms, particularly because we had no access to
+                                any real sheep for this purpose.
+                            </p>
+                            <p>
+                                The simulation was also helpful to train/test the image processing algorithms; a dataset could be created by saving the screen
+                                as well as a list of sheep positions.
                             </p>
 
-                            <div class="mini_header">UI</div>
+                            <div class="mini_header">HRI (Human Robot Interface)</div>
                             <p>
-                                My other role was to create a User Interface with which a farmer might control the drone herding process.
+                                My other role was to create a user interface through which a farmer might control the drone herding process.
+                                Special care was taken to make the HRI as intuitive as possible.
+                            </p>
+                            <p>
+                                A functional HRI was created using PyQt5 [110] in conjunction with Google's Maps API [111], using
+                                1240 lines of code (814 Python, 378 JavaScript and 48 HTML).
                             </p>
                             
                             <div class="mini_header">The full report can be found
