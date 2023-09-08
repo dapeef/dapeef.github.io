@@ -3,9 +3,9 @@ html {
 }
 
 body {
-    background-color: #000000;
+    background-color: #a7d98c;
     align-items: center;
-    color: white;
+    color: black;
     font-size: large;
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     height: 100%;
@@ -38,7 +38,7 @@ h3 {
 
 button {
     background-color: rgba(255, 255, 255, 0);
-    color: white;
+    color: black;
     border-radius: 2mm;
     transition: all 0.3s;
     font-family: inherit;
@@ -60,7 +60,7 @@ textarea::placeholder {
 }
 
 a:link {
-    color: rgb(104, 180, 255);
+    color: rgba(30, 95, 160, 0.904);
 }
 a:visited {
     color: rgb(164, 141, 209);
@@ -83,9 +83,8 @@ img {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    border: 0 solid white;
+    border: 2px solid black;
     border-radius: 2mm;
-    border-width: 1px;
 }
 
 hr {
@@ -103,7 +102,7 @@ hr {
 
 .border {
     padding: 2mm;
-    border: 1px solid white;
+    border: 3px solid black;
     border-radius: 2mm;
 }
 
@@ -144,27 +143,12 @@ hr {
 .output_container {
     font-size: medium;
     overflow-y: auto;
-    background-color: #2d003d;
+    background-color: #fff;
 }
-
-.go_button {
-    font-size: x-large;
-}
-.go_button:hover {
-    background-color: lightgreen;
-    color: black;
-}
-
-/* .button_status {
-    font-size: small;
-    max-height: 0;
-    opacity: 0;
-    transition: max-height .3s, opacity .3s;
-} */
 
 .collapsible_container {
     background-color: rgba(255, 255, 255, 0);
-    border: 0 solid white;
+    border: 0 solid black;
     border-radius: 2mm;
     padding: 0;
     margin: 2mm;
@@ -175,7 +159,7 @@ hr {
 
 .collapsible {
     background-color: rgba(255, 255, 255, 0);
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 2mm;
     text-align: left;
     transition-duration: 0.3s;
@@ -184,12 +168,13 @@ hr {
     width: 100%;
 }
 .collapsible:hover {
-    background-color: white;
-    color: black;
+    background-color: #3a701c;
+    color: white;
     font-weight: bold;
 }
 .collapsible_active {
-    background-color: rgb(27, 27, 27);
+    background-color: #a7d98c;
+    color: black;
     font-weight: bold;
 }
 
