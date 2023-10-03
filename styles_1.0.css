@@ -59,7 +59,7 @@ textarea::placeholder {
     color: rgb(124, 124, 124);
 }
 
-a:link {
+/* a:link {
     color: rgba(30, 95, 160, 0.904);
 }
 a:visited {
@@ -67,7 +67,7 @@ a:visited {
 }
 a:active {
     color: grey;
-}
+} */
 
 /* progress {
     width: auto;

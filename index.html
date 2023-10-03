@@ -24,7 +24,7 @@
                 <div id="output_container" class="output_container">
                     <h3>Welcome!</h3>
                     <p style="margin-left: 2mm;">
-                        Hello, internet traveller, and welcome to my website! This is a place for me to collect my hobbyist coding projects.
+                        This is a place for me to collect my hobbyist coding projects.
                         It is all entirely my own work; the projects as well as all the web design.
                     </p>
                     <p style="margin-left: 2mm;">
@@ -33,7 +33,7 @@
                     </p>
                     <p style="margin-left: 2mm;">
                         I'm a 4th year at Somerville College, Oxford, studying Engineering Science. I specialise in software/computer engineering,
-                        as well as civil/geotechnic engineering. I'm known around the internet as "dapeef".
+                        as well as civil/geotechnic engineering.
                     </p>
                     <p style="margin-left: 2mm;">
                         Outside of my degree I play bass trombone, ring church bells and play pool/snooker with the university.
@@ -54,6 +54,8 @@
                         Click the projects below to see more information
                     </div>
 
+
+
                     <!-- This website -->
                     <div class="collapsible_container">
                         <button class="collapsible">
@@ -64,12 +66,14 @@
                         </button>
                         <div class="collapsible_content">
                             <p style="margin-top: 2mm;">
-                                As mentioned in my Welcome section, this website is for me to display my coding projects that I've worked on during the last few years.
+                                As mentioned in my welcome section, this website is for me to display my coding projects that I've worked on during the last few years.
                                 I built it myself from the bottom up; my other websites are based on the same basic framework.
                             </p>
                             <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/home-page">GitHub page</a></div>
                         </div>
                     </div>
+
+
 
                     <!-- Bish Bash COSHH -->
                     <div class="collapsible_container">
@@ -101,11 +105,15 @@
                                 codes (for example, rejecting "Causes skin irritation" when "Causes serious skin irritation" is also present).
                             </p>
                             
-                            <img src="images/coshh.png" alt="Screenshot of Bish Bash COSHH">
+                            <a target="_blank" href="https://dapeef.github.io/coshh/">
+                                <img src="images/coshh.png" alt="Screenshot of Bish Bash COSHH">
+                            </a>
                             
                             <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/bish-bash-coshh">GitHub page</a></div>
                         </div>
                     </div>
+
+
 
                     <!-- Sheep herding -->
                     <div class="collapsible_container">
@@ -147,14 +155,71 @@
                                 Special care was taken to make the HRI as intuitive as possible.
                             </p>
                             <p>
-                                A functional HRI was created using PyQt5 [110] in conjunction with Google's Maps API [111], using
+                                A functional HRI was created using PyQt5 in conjunction with Google's Maps API, using
                                 1240 lines of code (814 Python, 378 JavaScript and 48 HTML).
                             </p>
                             
                             <div class="mini_header">The full report can be found
-                                <a target="_blank" href="https://drive.google.com/file/d/1OZmbmCxMcFP45Pimwzf1wZyLFN9SBxjT/view?usp=sharing">here</a></div>
+                                <a target="_blank" href="https://drive.google.com/file/d/1OZmbmCxMcFP45Pimwzf1wZyLFN9SBxjT/view?usp=sharing">here</a>
+                            </div>
                         </div>
                     </div>
+
+
+
+                    <!-- 4YP -->
+                    <div class="collapsible_container">
+                        <button class="collapsible">
+                            Pool/snooker coaching aide
+                            <div class="description">
+                                Software to aide pool and snooker shot visualisation and help coaches explain the effects of different shot types
+                            </div>
+                        </button>
+                        <div class="collapsible_content">
+                            <div class="mini_header">Motivation</div>
+                            <p>
+                                This software was made as part of my 4th year engineering individual project. The inspiration for this project comes from my
+                                enjoyment of pool and snooker; approaching a supervisor and "selling" the project to them allowed me to choose my own project,
+                                rather than choose from a list of academic-initiated projects. Fortunately I found a supervisor who was invested in the project;
+                                I would have likely done this project in my own time anyway...
+                            </p>
+
+                            <div class="mini_header">Simulation environment</div>
+                            <p>
+                                Part of my role in this project was to create a simulation environment to predict the sheep's response to drones.
+                            </p>
+                            <p>
+                                Initially, the drone path planning algorithm was planned to be a reinforcement learnt algorithm,
+                                which would require a large dataset. The simulation would act as an infinite dataset for the algorithm
+                                to train with; new data could be generated on-demand.
+                            </p>
+                            <p>
+                                Even after the reinforcement learning strategy was dismissed, a simulation environment was still
+                                required to validate the drone path planning algorithms, particularly because we had no access to
+                                any real sheep for this purpose.
+                            </p>
+                            <p>
+                                The simulation was also helpful to train/test the image processing algorithms; a dataset could be created by saving the screen
+                                as well as a list of sheep positions.
+                            </p>
+
+                            <div class="mini_header">HRI (Human Robot Interface)</div>
+                            <p>
+                                My other role was to create a user interface through which a farmer might control the drone herding process.
+                                Special care was taken to make the HRI as intuitive as possible.
+                            </p>
+                            <p>
+                                A functional HRI was created using PyQt5 in conjunction with Google's Maps API, using
+                                1240 lines of code (814 Python, 378 JavaScript and 48 HTML).
+                            </p>
+                            
+                            <div class="mini_header">The full report can be found
+                                <a target="_blank" href="https://drive.google.com/file/d/1OZmbmCxMcFP45Pimwzf1wZyLFN9SBxjT/view?usp=sharing">here</a>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                     <!-- Chicken Monitor -->
                     <div class="collapsible_container">
@@ -201,6 +266,8 @@
                         </div>
                     </div>
 
+
+
                     <!-- WhatsApp chat analyser -->
                     <div class="collapsible_container">
                         <button class="collapsible">
@@ -226,6 +293,8 @@
                         </div>
                     </div>
 
+
+
                     <!-- Battleships -->
                     <div class="collapsible_container">
                         <button class="collapsible">
@@ -250,6 +319,8 @@
                     </div>
                 </div>
             </div>
+
+
 
             <div class="copyright">
                 © Alistair White-Horne 2023
