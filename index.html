@@ -185,38 +185,29 @@
                                 I would have likely done this project in my own time anyway...
                             </p>
 
-                            <div class="mini_header">Simulation environment</div>
+                            <div class="mini_header">Heading 2</div>
                             <p>
-                                Part of my role in this project was to create a simulation environment to predict the sheep's response to drones.
-                            </p>
-                            <p>
-                                Initially, the drone path planning algorithm was planned to be a reinforcement learnt algorithm,
-                                which would require a large dataset. The simulation would act as an infinite dataset for the algorithm
-                                to train with; new data could be generated on-demand.
-                            </p>
-                            <p>
-                                Even after the reinforcement learning strategy was dismissed, a simulation environment was still
-                                required to validate the drone path planning algorithms, particularly because we had no access to
-                                any real sheep for this purpose.
-                            </p>
-                            <p>
-                                The simulation was also helpful to train/test the image processing algorithms; a dataset could be created by saving the screen
-                                as well as a list of sheep positions.
-                            </p>
-
-                            <div class="mini_header">HRI (Human Robot Interface)</div>
-                            <p>
-                                My other role was to create a user interface through which a farmer might control the drone herding process.
-                                Special care was taken to make the HRI as intuitive as possible.
-                            </p>
-                            <p>
-                                A functional HRI was created using PyQt5 in conjunction with Google's Maps API, using
-                                1240 lines of code (814 Python, 378 JavaScript and 48 HTML).
+                                Blah Blah
                             </p>
                             
-                            <div class="mini_header">The full report can be found
-                                <a target="_blank" href="https://drive.google.com/file/d/1OZmbmCxMcFP45Pimwzf1wZyLFN9SBxjT/view?usp=sharing">here</a>
-                            </div>
+                            <div class="mini_header">Further development</div>
+                            <p>
+                                This project is very much still in development, and will be until at least the end of this academic year, when the report deadline is.
+                            </p>
+                            <p>
+                                I'm still yet to create a nice UI for this app. I plan to create an app for this; possibly creating something in Unity, making release to
+                                both iOS/iPadOS and Android much easier. Mobile is the ideal platform for this because every phone/tablet has a camera and a screen,
+                                and is portable, making it ideal for this application. A desktop app will most likely be created for ease of development, and for more
+                                permanent setups; eg if a coach works full time on a given table.
+                            </p>
+                            <p>
+                                I'd also like to add the ability to track player accuracy. This would take the form of leaving the app to "watch" the player during a 
+                                practice session, taking note of each shot played, and the accuracy with which it was played. Ideally this process would be fully
+                                automated, allowing the app to be ignored and minimally impede the practice session. At the end, the player would receive a report
+                                including their strengths and weaknesses; for example, it would highlight if the player were consistently missing a single type of shot,
+                                or if they were consistently missing left/right or thick/thin. At this point it would be fairly easy to implement automatic scoring, at
+                                least for potting points. Once these have been implemented, I believe the software would be compellingly marketable.
+                            </p>
                         </div>
                     </div>
 
@@ -246,7 +237,7 @@
                             </p>
                             <p>
                                 This information can then be accessed via an HTML front end hosted by the Raspberry Pi. This means that the site can be accessed
-                                from outside the house, with the port forwarding and DNS settings configured.
+                                from outside the local network, with the port forwarding and DNS settings configured.
                             </p>
                             
                             <img src="images/chicken-monitor.png" alt="Screenshot of chicken monitor front end">
