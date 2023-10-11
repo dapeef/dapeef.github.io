@@ -56,25 +56,6 @@
 
 
 
-                    <!-- This website -->
-                    <div class="collapsible_container">
-                        <button class="collapsible">
-                            Website
-                            <div class="description">
-                                The website you're looking at now
-                            </div>
-                        </button>
-                        <div class="collapsible_content">
-                            <p style="margin-top: 2mm;">
-                                As mentioned in my welcome section, this website is for me to display my coding projects that I've worked on during the last few years.
-                                I built it myself from the bottom up; my other websites are based on the same basic framework.
-                            </p>
-                            <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/home-page">GitHub page</a></div>
-                        </div>
-                    </div>
-
-
-
                     <!-- Bish Bash COSHH -->
                     <div class="collapsible_container">
                         <button class="collapsible">
@@ -213,53 +194,6 @@
 
 
 
-                    <!-- Chicken Monitor -->
-                    <div class="collapsible_container">
-                        <button class="collapsible">
-                            Chicken egg monitor
-                            <div class="description">
-                                A script to detect, monitor and display when chickens have laid eggs and how heavy they are
-                            </div>
-                        </button>
-                        <div class="collapsible_content">
-                            <div class="mini_header">Motivation</div>
-                            <p>
-                                As well as sheep, we have chickens. It's a nuisance to have to repeatedly check during the day whether there are eggs ready for collection;
-                                this tool was designed to combat that issue. As well as that, this tool could be expanded to identify which chicken has laid which egg -
-                                more on that in the "Further development section".
-                            </p>
-
-                            <div class="mini_header">Solution</div>
-                            <p>
-                                This tool takes advantage of a digital weighing scale connected to a Raspberry Pi which can be fitted underneath the egg collection area.
-                                All eggs laid in the nesting box roll into the egg collection area, causing a step change in weight recorded by the scales.
-                                This step can be recorded and measured to identify the timestamp and mass of the egg.
-                            </p>
-                            <p>
-                                This information can then be accessed via an HTML front end hosted by the Raspberry Pi. This means that the site can be accessed
-                                from outside the local network, with the port forwarding and DNS settings configured.
-                            </p>
-                            
-                            <img src="images/chicken-monitor.png" alt="Screenshot of chicken monitor front end">
-                            
-                            <div class="mini_header">Further development</div>
-                            <p>
-                                I'd like to expand this project to include an RFID sensor in the nesting box, in conjuction with RFID leg bands on the chickens, to detect
-                                which chicken lays which eggs. This would prove useful to detect which chickens are off lay or ill, leading to improved flock management.
-                            </p>
-                            <p>
-                                It would also be nice to integrate an programmable pop-hole closing system, handled by the same Raspberry Pi. The chickens need to be let
-                                out near sunrise, which gets particularly early during the summer; this tool would allow the door to be opened at a preprogrammed time
-                                (or be triggered by a light sensor), removing the need to wake up so early. This could also be used in
-                                conjuction with a couple of RFID sensors to ensure all chickens are inside the house before the door is closed for the night.
-                            </p>
-
-                            <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/chicken-monitor">GitHub page</a></div>
-                        </div>
-                    </div>
-
-
-
                     <!-- WhatsApp chat analyser -->
                     <div class="collapsible_container">
                         <button class="collapsible">
@@ -307,6 +241,72 @@
                             </p>
                             
                             <!-- <div class="mini_header"><a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/compound/887">GitHub page</a></div> -->
+                        </div>
+                    </div>
+
+
+
+                    <!-- This website -->
+                    <div class="collapsible_container">
+                        <button class="collapsible">
+                            Website
+                            <div class="description">
+                                The website you're looking at now
+                            </div>
+                        </button>
+                        <div class="collapsible_content">
+                            <p style="margin-top: 2mm;">
+                                As mentioned in my welcome section, this website is for me to display my coding projects that I've worked on during the last few years.
+                                I built it myself from the bottom up; my other websites are based on the same basic framework.
+                            </p>
+                            <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/home-page">GitHub page</a></div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Chicken Monitor -->
+                    <div class="collapsible_container">
+                        <button class="collapsible">
+                            Chicken egg monitor
+                            <div class="description">
+                                A script to detect, monitor and display when chickens have laid eggs and how heavy they are
+                            </div>
+                        </button>
+                        <div class="collapsible_content">
+                            <div class="mini_header">Motivation</div>
+                            <p>
+                                As well as sheep, we have chickens. It's a nuisance to have to repeatedly check during the day whether there are eggs ready for collection;
+                                this tool was designed to combat that issue. As well as that, this tool could be expanded to identify which chicken has laid which egg -
+                                more on that in the "Further development section".
+                            </p>
+
+                            <div class="mini_header">Solution</div>
+                            <p>
+                                This tool takes advantage of a digital weighing scale connected to a Raspberry Pi which can be fitted underneath the egg collection area.
+                                All eggs laid in the nesting box roll into the egg collection area, causing a step change in weight recorded by the scales.
+                                This step can be recorded and measured to identify the timestamp and mass of the egg.
+                            </p>
+                            <p>
+                                This information can then be accessed via an HTML front end hosted by the Raspberry Pi. This means that the site can be accessed
+                                from outside the local network, with the port forwarding and DNS settings configured.
+                            </p>
+                            
+                            <img src="images/chicken-monitor.png" alt="Screenshot of chicken monitor front end">
+                            
+                            <div class="mini_header">Further development</div>
+                            <p>
+                                I'd like to expand this project to include an RFID sensor in the nesting box, in conjuction with RFID leg bands on the chickens, to detect
+                                which chicken lays which eggs. This would prove useful to detect which chickens are off lay or ill, leading to improved flock management.
+                            </p>
+                            <p>
+                                It would also be nice to integrate an programmable pop-hole closing system, handled by the same Raspberry Pi. The chickens need to be let
+                                out near sunrise, which gets particularly early during the summer; this tool would allow the door to be opened at a preprogrammed time
+                                (or be triggered by a light sensor), removing the need to wake up so early. This could also be used in
+                                conjuction with a couple of RFID sensors to ensure all chickens are inside the house before the door is closed for the night.
+                            </p>
+
+                            <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/chicken-monitor">GitHub page</a></div>
                         </div>
                     </div>
                 </div>
