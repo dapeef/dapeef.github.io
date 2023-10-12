@@ -150,13 +150,13 @@
 
                             <figure>
                                 <img src="images/hri-boids-screenshot.png" alt="Screenshot of the HRI, overlaying the simulated sheep and drone locations on the map">
-                                <figcaption>Screenshot of the HRI, overlaying the simulated sheep and drone locations on the map</figcaption>
+                                <figcaption>A screenshot of the HRI, overlaying the simulated sheep and drone locations on the map</figcaption>
                             </figure>
 
                             <figure>
                                 <img style="width: 50%;" src="images/hri-edit-map-wall.png"
                                     alt="Screenshot of the HRI's infrastructure editing functionality; in this case editing a wall">
-                                <figcaption>Screenshot of the HRI's infrastructure editing functionality; in this case editing a wall</figcaption>
+                                <figcaption>A screenshot of the HRI's infrastructure editing functionality; in this case editing a wall</figcaption>
                             </figure>
                             
                             <div class="mini_header">
@@ -249,7 +249,7 @@
                                 script as responsive as possible. An example of this feature can be seen in the second image.
                             </p>
                             <p>
-                                The UI uses python's Tkinter library, with matplotlib to drive the graph.
+                                The UI uses python's <code>Tkinter</code> library, with <code>matplotlib</code> to drive the graph.
                             </p>
                             
                             <figure>
@@ -295,6 +295,9 @@
                                 play commences. The player takes shots by clicking on the computer's side of the board, and the computer takes shots back.
                                 Once all of one player's ships are sunk, the game ends.
                             </p>
+                            <p>
+                                Once I'd created the game, I turned it into a MacOS app using the python library <code>py2applet</code>.
+                            </p>
 
                             <div class="mini_header">The AI</div>
                             <p>
@@ -331,21 +334,30 @@
                             </div>
                         </button>
                         <div class="collapsible_content">
-                            <div class="mini_header">Motivation</div>
+                            <div class="mini_header">Project description</div>
                             <p>
-
+                                This project was just a bit of fun to get some experience with writing realtime simulations and coding with TypeScript.
+                                You can have a fiddle with it <a target="_blank" href="https://dapeef.github.io/orbit-simulator">here</a>.
+                            </p>
+                            <p>
+                                Each frame the simulation calculates the force vector applied to each entity (by summing gravitational attractions from
+                                each of the other entities). This is then divided by the entity's mass to get acceleration and subsequently
+                                integrated twice approximately by multiplying by <code>dt</code> twice each frame, accumulating velocity.
                             </p>
 
-                            <div class="mini_header">Solution</div>
-                            <p>
+                            <figure>
+                                <a target="_blank" href="https://dapeef.github.io/orbit-simulator">
+                                    <img src="images/orbit.png"
+                                        alt="A screenshot of the orbiting simulation">
+                                </a>
+                                <figcaption>
+                                    A screenshot of the orbiting simulation
+                                </figcaption>
+                            </figure>
 
-                            </p>
-                            
-                            <!-- <div class="mini_header"><a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/compound/887">GitHub page</a></div> -->
+                            <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/orbit-simulator">GitHub page</a></div>
                         </div>
                     </div>
-
-
 
                     <!-- This website -->
                     <div class="collapsible_container">
