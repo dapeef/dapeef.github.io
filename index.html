@@ -14,9 +14,9 @@
             <h1>Alistair White-Horne</h1>
             <h2>
                 <a target="_blank" href="https://github.com/dapeef/">GitHub</a>
-                <span>&#183;</span>
+                <span class="cdot">•</span>
                 <a target="_blank" href="https://www.linkedin.com/in/alistair-white-horne-4592bb200/">LinkedIn</a>
-                <span>&#183;</span>
+                <span class="cdot">•</span>
                 <a target="_blank" href="https://www.facebook.com/alistair.wh/">Facebook</a>
             </h2>
 
@@ -38,6 +38,7 @@
                     <p style="margin-left: 2mm;">
                         Outside of my degree I play bass trombone, ring church bells and play pool/snooker with the university.
                         I'm also a member of Oxford University Air Squadron, an RAF volunteer reserve organisation for university students.
+                        I've recently got into flying cinematic and racing FPV drones.
                     </p>
 
                     <div class="double_line">
@@ -118,17 +119,22 @@
                             <p>
                                 Initially, the drone path planning algorithm was planned to be a reinforcement learnt algorithm,
                                 which would require a large dataset. The simulation would act as an infinite dataset for the algorithm
-                                to train with; new data could be generated on-demand.
-                            </p>
-                            <p>
+                                to train with; new data could be generated on-demand. 
                                 Even after the reinforcement learning strategy was dismissed, a simulation environment was still
                                 required to validate the drone path planning algorithms, particularly because we had no access to
-                                any real sheep for this purpose.
-                            </p>
-                            <p>
+                                any real sheep for this purpose. 
                                 The simulation was also helpful to train/test the image processing algorithms; a dataset could be created by saving the screen
                                 as well as a list of sheep positions.
                             </p>
+                            <p>
+                                An adapted <a target="_blank" href="https://en.wikipedia.org/wiki/Boids">boids</a> simulation was used to simulate the sheep's behaviour.
+                                This was implemented in python using pygame to handle the graphics. A screenshot of the boids simulation is below:
+                            </p>
+                            
+                            <figure>
+                                <img src="images/boids.png" alt="Screenshot of the sheep simulation">
+                                <figcaption>Screenshot of the sheep simulation</figcaption>
+                            </figure>
 
                             <div class="mini_header">HRI (Human Robot Interface)</div>
                             <p>
@@ -137,8 +143,20 @@
                             </p>
                             <p>
                                 A functional HRI was created using PyQt5 in conjunction with Google's Maps API, using
-                                1240 lines of code (814 Python, 378 JavaScript and 48 HTML).
+                                1240 lines of code (814 Python, 378 JavaScript and 48 HTML). This was able to display the sheep location data created by the simation
+                                environment, as well as create, edit and display walls and gates on top of the map.
                             </p>
+
+                            <figure>
+                                <img src="images/hri-boids-screenshot.png" alt="Screenshot of the HRI, overlaying the simulated sheep and drone locations on the map">
+                                <figcaption>Screenshot of the HRI, overlaying the simulated sheep and drone locations on the map</figcaption>
+                            </figure>
+
+                            <figure>
+                                <img style="width: 50%;" src="images/hri-edit-map-wall.png"
+                                    alt="Screenshot of the HRI's infrastructure editing functionality; in this case editing a wall">
+                                <figcaption>Screenshot of the HRI's infrastructure editing functionality; in this case editing a wall</figcaption>
+                            </figure>
                             
                             <div class="mini_header">
                                 The full report can be found

@@ -78,13 +78,22 @@ p {
     margin-bottom: 4mm;
 }
 
+figure {
+    margin-bottom: 4mm;
+}
+
 img {
     display: block;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 2mm;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
 }
 
 hr {
@@ -237,4 +246,9 @@ hr {
     text-align: center;
     padding-bottom: 2mm;
     padding-top: 2mm;
+}
+
+.cdot {
+    padding-left: 1.5mm;
+    padding-right: 1.5mm;
 }
