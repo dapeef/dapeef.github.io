@@ -185,9 +185,9 @@
                                 I would have likely done this project in my own time anyway...
                             </p>
 
-                            <div class="mini_header">Heading 2</div>
+                            <div class="mini_header">Progress so far</div>
                             <p>
-                                Blah Blah
+                                Blah blah
                             </p>
                             
                             <div class="mini_header">Further development</div>
@@ -283,6 +283,51 @@
                             Battleships with AI
                             <div class="description">
                                 The game of battleships, with an artificial intelligence to play against
+                            </div>
+                        </button>
+                        <div class="collapsible_content">
+                            <div class="mini_header">Project description</div>
+                            <p>
+                                This is one of my older projects, made just for the fun of it.
+                            </p>
+                            <p>
+                                At the start of the game, the play clicks and drags on their side of the board to place ships. Once all ships are placed,
+                                play commences. The player takes shots by clicking on the computer's side of the board, and the computer takes shots back.
+                                Once all of one player's ships are sunk, the game ends.
+                            </p>
+
+                            <div class="mini_header">The AI</div>
+                            <p>
+                                The AI initially shoots randomly on a grid of alternating squares, in the knowledge that that'll catch even the 2-long ship.
+                                When it hits a ship, it will systematically hunt it down to ensure that it's destroyed, then continue with the previous strategy
+                                of shooting at alternating squares.
+                            </p>
+                            <p>
+                                When in the "alternating square" regime, the AI checks to ensure that to square it's shooting at is possible to be filled by a ship.
+                                For example if all ships have been sunk apart from the 5-long, then there's no point shooting in only 4-long gaps.
+                                If this is the case, the AI will choose to shoot at another square.
+                            </p>
+                            
+                            <figure>
+                                <img src="images/battleships.png"
+                                    alt="A screenshot of the battleships game">
+                                <figcaption>
+                                    A screenshot of the battleships game, with the player on the cusp of winning
+                                </figcaption>
+                            </figure>
+                            
+                            <!-- <div class="mini_header"><a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/compound/887">GitHub page</a></div> -->
+                        </div>
+                    </div>
+
+
+
+                    <!-- Orbit simulator -->
+                    <div class="collapsible_container">
+                        <button class="collapsible">
+                            Orbit simulator
+                            <div class="description">
+                                A simulator for a 2D orbital system
                             </div>
                         </button>
                         <div class="collapsible_content">
