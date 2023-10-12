@@ -84,7 +84,7 @@ figure {
 
 img {
     display: block;
-    width: 75%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     border: 3px solid black;
@@ -114,7 +114,7 @@ code {
     height: 100%;
     margin: auto;
     width: 90%;
-    max-width: 25cm;
+    max-width: 75em;
 }
 
 .border {

@@ -84,7 +84,8 @@
                                 unique ID, which is then used in a request to <a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>'s main API
                                 to get in-depth information about the chemical. This information is then parsed to extract the hazard information, as well as
                                 other useful information like boiling point and molecular weight. My site further processes the hazard codes, removing redundant
-                                codes (for example, rejecting "Causes skin irritation" when "Causes serious skin irritation" is also present).
+                                codes (for example, rejecting "Causes skin irritation" when "Causes serious skin irritation" is also present), as well as tidying
+                                anomalous H-code formatting.
                             </p>
                             
                             <a target="_blank" href="https://dapeef.github.io/coshh/">
