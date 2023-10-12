@@ -207,6 +207,8 @@
                                 or if they were consistently missing left/right or thick/thin. At this point it would be fairly easy to implement automatic scoring, at
                                 least for potting points. Once these have been implemented, I believe the software would be compellingly marketable.
                             </p>
+
+                            <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/4yp-snooker-aide">GitHub page</a></div>
                         </div>
                     </div>
 
@@ -223,17 +225,52 @@
                         <div class="collapsible_content">
                             <div class="mini_header">Motivation</div>
                             <p>
-
+                                I found out one day that it's possible to export a WhatsApp chat (both group and individual). This made me curious as to what
+                                could be done with this data, and this project is the result of that.
                             </p>
-                            
+                            <p>
+                                As it transpires, it's also possible to get exports of Facebook Messenger chats, which I also implemented.
+                            </p>
 
                             <div class="mini_header">Solution</div>
                             <p>
-
+                                My script takes the exported chat and converts it into a more conducive format for searching; each message becoming an object of type
+                                <code>Message</code>, which
+                                handles all the relevant information (eg. timestamp, message contents, sender etc.). The <code>Message</code> class has a
+                                <code>search</code> function, which returns the number of results in the text. This function by default searches for full words,
+                                but also supports Regex search for maximal flexibility. All the messages are iterated over, tallying the number of results in any given
+                                day.
                             </p>
+                            <p>
+                                The results of the search are cached into a pandas database. While the search isn't painfully slow, particularly on a modern CPU, it
+                                still makes sense to cache data, particularly when normalisation is used; the script allows you to display each result normalised
+                                normalised by any other result, essentially dividing one column by another. These normalised columns are also cached to make the
+                                script as responsive as possible. An example of this feature can be seen in the second image.
+                            </p>
+                            <p>
+                                The UI uses python's Tkinter library, with matplotlib to drive the graph.
+                            </p>
+                            
+                            <figure>
+                                <img src="images/whatsapp-analyser.png"
+                                    alt="A screenshot of the WhatsApp chat analyser, displaying the number of words sent by two people in a relationship over time">
+                                <figcaption>
+                                    A screenshot of the WhatsApp chat analyser, displaying the number of words sent by two people in a relationship over time,
+                                    with a smoothing 10-day average
+                                </figcaption>
+                            </figure>
+                            
+                            <figure>
+                                <img src="images/whatsapp-nicknames.png"
+                                    alt="A screenshot of the WhatsApp chat analyser">
+                                <figcaption>
+                                    A graph of the use of two different nicknames (orange and red), by two people (dark and light grey) over time,
+                                    as a proportion of the total words sent by each person, heavily smoothed with a 100-day average 
+                                </figcaption>
+                            </figure>
                         
                             
-                            <!-- <div class="mini_header"><a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/compound/887">GitHub page</a></div> -->
+                            <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/whatsapp-analyser">GitHub page</a></div>
                         </div>
                     </div>
 
