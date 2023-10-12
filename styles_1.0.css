@@ -149,6 +149,30 @@ code {
     font-size: small;
 }
 
+#welcome_container {
+    margin-top: 0;
+    margin-left: 2mm;
+    margin-right: 2mm;
+    margin-bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#profile_photo {
+    margin: 0;
+    height: 11em;
+    flex: 0;
+}
+
+#welcome_text {
+    margin-top: 0;
+    margin-left: 2mm;
+    margin-right: 0;
+    margin-bottom: 0;
+    flex: 1;
+    height: min-content;
+}
+
 .output_container_outer {
     overflow: hidden;
     padding: 0;

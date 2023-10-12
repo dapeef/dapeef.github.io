@@ -23,28 +23,34 @@
             <div class="output_container_outer border main_frame">
                 <div id="output_container" class="output_container">
                     <h3>Welcome!</h3>
-                    <p style="margin-left: 2mm;">
-                        This is a place for me to collect my hobbyist coding projects.
-                        It is all entirely my own work; the projects as well as all the web design.
-                    </p>
-                    <p style="margin-left: 2mm;">
-                        My projects are mostly just a bit of fun; making computers do cool things or to make tools to make life slightly easier.
-                        Mixed in are also some projects which I've done as part of my degree.
-                    </p>
-                    <p style="margin-left: 2mm;">
-                        I'm a 4th year at Somerville College, Oxford, studying Engineering Science. I specialise in software/computer engineering,
-                        as well as civil/geotechnic engineering.
-                    </p>
-                    <p style="margin-left: 2mm;">
-                        Outside of my degree I play bass trombone, ring church bells and play pool/snooker with the university.
-                        I'm also a member of Oxford University Air Squadron, an RAF volunteer reserve organisation for university students.
-                        I've recently got into flying cinematic and racing FPV drones.
-                    </p>
+                    <div id="welcome_container">
+                        <img src="images/me.jpg" alt="A photo of me" id="profile_photo">
 
-                    <div class="double_line">
-                        <hr>
-                        <hr>
+                        <div id="welcome_text">
+                            <p>
+                                This is a place for me to collect my hobbyist coding projects.
+                                It is all entirely my own work; the projects as well as all the web design.
+                            </p>
+                            <p>
+                                My projects are mostly just a bit of fun; making computers do cool things or to make tools to make life slightly easier.
+                                Mixed in are also some projects which I've done as part of my degree.
+                            </p>
+                            <p>
+                                I'm a 4th year at Somerville College, Oxford, studying Engineering Science. I specialise in software/computer engineering,
+                                as well as civil/geotechnic engineering.
+                            </p>
+                            <p>
+                                Outside of my degree I play bass trombone, ring church bells and play pool/snooker with the university.
+                                I'm also a member of Oxford University Air Squadron, an RAF volunteer reserve organisation for university students.
+                                I've recently got into flying cinematic and racing FPV drones.
+                            </p>
+                        </div>
                     </div>
+
+                    <!-- <div class="double_line">
+                        <hr>
+                        <hr>
+                    </div> -->
 
 
 
@@ -88,9 +94,14 @@
                                 anomalous H-code formatting.
                             </p>
                             
-                            <a target="_blank" href="https://dapeef.github.io/coshh/">
-                                <img src="images/coshh.png" alt="Screenshot of Bish Bash COSHH">
-                            </a>
+                            
+                                
+                            <figure>
+                                <a target="_blank" href="https://dapeef.github.io/coshh/">
+                                    <img src="images/coshh.png" alt="Screenshot of Bish Bash COSHH">
+                                </a>
+                                <figcaption>A screenshot of the site</figcaption>
+                            </figure>
                             
                             <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/bish-bash-coshh">GitHub page</a></div>
                         </div>
@@ -134,7 +145,7 @@
                             
                             <figure>
                                 <img src="images/boids.png" alt="Screenshot of the sheep simulation">
-                                <figcaption>Screenshot of the sheep simulation</figcaption>
+                                <figcaption>A screenshot of the sheep simulation</figcaption>
                             </figure>
 
                             <div class="mini_header">HRI (Human Robot Interface)</div>
@@ -434,5 +445,6 @@
 
         <script src="jquery-3.6.0.min.js"></script>
         <script src="folding-output.js"></script>
+        <script src="image-height.js"></script>
     </body>
 </html>
