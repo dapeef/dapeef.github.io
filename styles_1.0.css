@@ -162,6 +162,7 @@ code {
     margin: 0;
     height: 11em;
     flex: 0;
+    /* transition: width 0.1s, height 0.1s; */
 }
 
 #welcome_text {
