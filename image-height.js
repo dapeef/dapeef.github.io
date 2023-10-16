@@ -8,6 +8,7 @@ var aspect_ratio = imageElement.offsetWidth / imageElement.offsetHeight;
 
 var adjustImageHeight = function() {
     var counter = 0;
+    console.log("boo")
 
     while(Math.abs(textElement.offsetHeight - (imageElement.offsetHeight)) > DELTA && counter < 100)  {
         imageElement.style.height = ((imageElement.offsetHeight + textElement.offsetHeight) / 2 - border_width*2) + 'px';
@@ -29,6 +30,6 @@ var adjustImageHeight = function() {
 
 window.addEventListener('resize', adjustImageHeight);
 adjustImageHeight();
-// imageElement.style.height = "22em"
+setTimeout(adjustImageHeight, 250);
 
 // https://jsbin.com/puyuqehube/1/edit?html,css,js,output
