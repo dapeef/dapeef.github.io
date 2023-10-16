@@ -4,21 +4,22 @@ var imageElement = document.getElementById("profile_photo");
 
 var DELTA = .25; // Cancel approximation when the height difference is less than DELTA.
 var border_width = 3; // Thickness of the image's border
+var aspect_ratio = imageElement.offsetWidth / imageElement.offsetHeight;
 
 var adjustImageHeight = function() {
-    console.log(imageElement.offsetHeight);
-    console.log(textElement.offsetHeight);
-
     var counter = 0;
 
     while(Math.abs(textElement.offsetHeight - (imageElement.offsetHeight)) > DELTA && counter < 100)  {
-        console.log(imageElement.offsetHeight + " " + textElement.offsetHeight)
-        imageElement.style.height = ((imageElement.offsetHeight + textElement.offsetHeight) / 2 - border_width*2) + 'px';   
-        console.log(imageElement.offsetHeight)
+        imageElement.style.height = ((imageElement.offsetHeight + textElement.offsetHeight) / 2 - border_width*2) + 'px';
+        imageElement.style.width = imageElement.offsetHeight * aspect_ratio - border_width*2 + 'px';
         
         //Image grows larger than container, reset its size.
-        if(imageElement.offsetWidth > containerElement.offsetWidth) {
-            imageElement.style.height = 'auto';
+        if(imageElement.offsetWidth > containerElement.offsetWidth / 2) {
+            imageElement.style.width = containerElement.offsetWidth / 2 - border_width*2 + 'px';
+            imageElement.style.height = imageElement.offsetWidth / aspect_ratio - border_width*2 + 'px';
+
+            console.log("yikes, too wide " + containerElement.offsetWidth + " " + imageElement.offsetWidth);
+
             return;
         };
 
