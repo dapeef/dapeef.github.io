@@ -183,7 +183,7 @@
                         <button class="collapsible">
                             Pool/snooker coaching aide
                             <div class="description">
-                                Software to aide pool and snooker shot visualisation and help coaches explain the effects of different shot types, using machine learning
+                                Software to aid pool and snooker shot visualisation and help coaches explain the effects of different shot types, using machine learning
                             </div>
                         </button>
                         <div class="collapsible_content">
@@ -197,7 +197,47 @@
 
                             <div class="mini_header">Progress so far</div>
                             <p>
-                                Blah blah
+                                At this early stage in the project, I've started by working on more manual methods for ball recognition as well as edge detection for the
+                                snooker table.
+
+                                The best ball recognition technique I've found so far is as follows:
+                                <ol>
+                                    <li>Convert the image to HSV, and extract only the Value.</li>
+                                    <li>Run an edge detection algorithm on the Value.</li>
+                                    <li>Run a circle Hough transform on the edge pixelmap.</li>
+                                </ol>
+
+                                This has yielded some very good results as seen below:
+                                <figure>
+                                    <img src="images/snooker-balls.png"
+                                        alt="A screenshot of the ball detection algorithm">
+                                    <figcaption>
+                                        The result of the ball detection algorithm
+                                    </figcaption>
+                                </figure>
+
+                                The current edge detection technique is as follows, and the results can be seen in the image below:
+                                <ol>
+                                    <li>Run <a target="_blank" href="https://segment-anything.com/">SAM (Segment Anything Model, from Meta AI)</a> on the image
+                                        with rough prompts as to where the green section of the table is. This creates a segmentation mask.</li>
+                                    <li>Run a Hough line transform on the image to select the rough edges (SAM doesn't perfectly find the boundaries in the image).</li>
+                                    <li>Dilate the mask and apply that to the colour image.</li>
+                                    <li>Run a Hough line transform on the masked colour image with a very low threshold.</li>
+                                    <li>Find the Hough lines from the colour image which are most similar to those from the SAM mask.</li>
+                                </ol>
+
+                                While this yields very good results, SAM is very resource intensive to run on a single image, and only runs in python. It was initially
+                                considered an option to host this on a server as an API which the app would send the image to. This has been discarded due to the expense
+                                of running high performance code on a hired server. The next approach to try is to use a neural net to identify approximate corner locations,
+                                then use the same dilation and colour Hough transform as described above to refine the search.
+                            
+                                <figure>
+                                    <img src="images/snooker-edges.png"
+                                        alt="A screenshot of the edge detection algorithm">
+                                    <figcaption>
+                                        The result of the edge detection algorithm
+                                    </figcaption>
+                                </figure>
                             </p>
                             
                             <div class="mini_header">Further development</div>
