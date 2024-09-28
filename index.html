@@ -61,6 +61,129 @@
 
 
 
+                    <!-- 4YP -->
+                    <div class="collapsible_container">
+                        <button class="collapsible">
+                            Real-time pool and snooker assistant
+                            <div class="description">
+                                Software to aid pool and snooker shot visualisation and help coaches explain the effects of different shot types, using machine learning
+                            </div>
+                        </button>
+                        <div class="collapsible_content">
+                            <div class="mini_header">Motivation</div>
+                            <p>
+                                This software is part of my 4th year engineering individual project. The inspiration for this project comes from my
+                                enjoyment of pool and snooker. Desipite having done extensive research into the theory as to how balls interract, I still find it difficult
+                                to visualise how shots will play out, in particular where the cue ball will go; an essential part of the game. For that reason, I've chosen
+                                to implement a detection system which allows an image of the current table state to be imported into the system and
+                                used as an input to the visualisation tool.
+                            </p>
+
+                            <div class="mini_header">Solution</div>
+                            <p>
+                                To address this difficulty, I created a system which could detect, classify and locate balls on the table from a single image taken from an
+                                arbitrary position. I then use Evan Keifl's <a target="_blank" href="https://github.com/ekiefl/pooltool">pooltool</a> to predict how a shot
+                                will progress. This prediction is then displayed intuitively in a GUI.
+                            </p>
+
+                            <div class="mini_header">System overview</div>
+                            <p>
+                                Each component/module in this project had multiple prototype versions (you can read more about them in the
+                                <a target="_blank" href="https://drive.google.com/file/d/1-pUT87cGoxx8DyMNVIMUoU6f-rVrz4IR/view?usp=sharing">full report</a>), but here only
+                                final solutions are explained. The modules are as follows: 
+                                <ol>
+                                    <li>Table detection — The system needs to ascertain where the table lies in the image.</li>
+                                    <li>Ball detection and classification — The system must also detect where the balls are in the image,
+                                    and classify which balls are in which locations.</li>
+                                    <li>Projection — The ball and table image locations can be used to infer the balls' global positions.</li>
+                                    <li>Shot simulation — Once the balls' positions are known, the shot must be simulated based on the
+                                    user's inputs through the GUI.</li>
+                                    <li>GUI — The Graphical User Interface (GUI) provides the interface for the user to propose shots to
+                                    be simulate, as well as view the result from the simulation.</li>
+                                </ol>
+
+                                <figure>
+                                    <img src="images/system-flow-chart.png" alt="Flow chart showing how data is passed between the software modules" style="width: 35em;">
+                                    <figcaption>Flow chart showing how data is passed between the software modules</figcaption>
+                                </figure>
+                            </p>
+
+                            <!-- <div class="mini_header">Table detection</div>
+                            <p>
+                                The most effective and accurate table detection algorithm used a neural network to identify the locations of the 6 pockets on the table.
+                                The 4 table corners can then be extracted from the original 6 pockets.
+
+                                The model of choice is the Faster R-CNN, trained on an existing dataset of images of pool tables with labelled pockets.
+                                A small amount of data augmentation was used to make the most of the small dataset; slight rotation randomisation, along with random
+                                horizontal reflection to simulate a change of perspective.
+
+                                <figure>
+                                    <img src="images/nn-pockets.png" alt="The output of the neural network pocket detector" style="width: 40em;">
+                                    <figcaption>The output of the neural network pocket detector</figcaption>
+                                </figure>
+                            </p> -->
+
+                            <div class="mini_header">Final product</div>
+                            <p>
+                                The final product was made using python for two reasons. The existence of the module
+                                <a target="_blank" href="https://pytorch.org/">pytorch</a> makes training neural networks very straightforward,. As well as that, I'm
+                                very familiar with python and have made GUIs with it recently, so won't need to invest time learning my way around a new language or GUI module.
+                            </p>
+                            
+                            <p>
+                                The GUI was created using <a target="_blank" href="https://pypi.org/project/PyQt5/">PyQt5</a>, a python library with bindings for the
+                                <a target="_blank" href="https://www.qt.io/">Qt framework</a>. Below is a screenshot of the home screen of the GUI. For more detail, see the
+                                <a target="_blank" href="https://drive.google.com/file/d/1-pUT87cGoxx8DyMNVIMUoU6f-rVrz4IR/view?usp=sharing">full report</a>.
+                            </p>
+
+                            <figure>
+                                <img src="images\home-page-screenshot.png" alt="A screenshot of the home page of the GUI" style="width: 100%;">
+                                <figcaption>A screenshot of the home page of the GUI</figcaption>
+                            </figure>
+
+                            <figure>
+                                <img src="images/hardware-setup.jpg" alt="A picture of the current hardware setup. The webcam is blue-tacked to the wall." style="width: 40em;">
+                                <figcaption>A picture of the current hardware setup. The webcam is blue-tacked to the wall.</figcaption>
+                            </figure>
+
+                            <figure>
+                                <img src="images/nn-pockets.png" alt="The output of the neural network pocket detector" style="width: 40em;">
+                                <figcaption>The output of the neural network pocket detector</figcaption>
+                            </figure>
+
+                            <figure>
+                                <img src="images/nn-balls.png" alt="The output of the neural network ball detector and classifier" style="width: 40em;">
+                                <figcaption>The output of the neural network ball detector and classifier</figcaption>
+                            </figure>
+
+                            <div class="mini_header">Further development</div>
+                            <p>
+                                The current GUI only runs on a desktop machine/laptop, making it inconvient to use due to the extensive setup required before use.
+                                To abate this issue, I plan to create a mobile app for this; likely creating something in Unity, making release to
+                                both iOS/iPadOS and Android much easier. Mobile is the ideal platform for this because every phone/tablet has a camera and a screen,
+                                and is portable. The desktop app still has a use case, for example more permanent setups; eg if a coach works full time on a given table.
+                            </p>
+                            <p>
+                                I'd also like to add the ability to track player accuracy. This would take the form of leaving the system to "watch" the player during a 
+                                practice session, taking note of each shot played, and the accuracy with which it was played. Ideally this process would be fully
+                                automated, allowing the app to be ignored and minimally impede the practice session. At the end, the player would receive a report
+                                including their strengths and weaknesses; for example, it would highlight if the player were consistently missing a single type of shot,
+                                or if they were consistently missing left/right or thick/thin. At this point it would be fairly easy to implement automatic match scoring, at
+                                least for potting points. Once these have been implemented, I believe the software would be compellingly marketable.
+                            </p>
+
+                            <div class="mini_header">
+                                View the 
+                                <a target="_blank" href="https://drive.google.com/file/d/1-pUT87cGoxx8DyMNVIMUoU6f-rVrz4IR/view?usp=sharing">full report</a> 
+                                or the 
+                                <a target="_blank" href="https://github.com/dapeef/4yp-snooker-aide">GitHub page</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
                     <!-- Bish Bash COSHH -->
                     <div class="collapsible_container">
                         <button class="collapsible">
@@ -174,93 +297,6 @@
                                 or the 
                                 <a target="_blank" href="https://github.com/dapeef/3yp-sheep-herding">GitHub page</a>
                             </div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- 4YP -->
-                    <div class="collapsible_container">
-                        <button class="collapsible">
-                            Pool/snooker coaching aide
-                            <div class="description">
-                                Software to aid pool and snooker shot visualisation and help coaches explain the effects of different shot types, using machine learning
-                            </div>
-                        </button>
-                        <div class="collapsible_content">
-                            <div class="mini_header">Motivation</div>
-                            <p>
-                                This software is part of my 4th year engineering individual project. The inspiration for this project comes from my
-                                enjoyment of pool and snooker; approaching a supervisor and "selling" the project to them allowed me to choose my own project,
-                                rather than choose from a list of academic-initiated projects. Fortunately I found a supervisor who was invested in the project;
-                                I would have likely done this project in my own time anyway...
-                            </p>
-
-                            <div class="mini_header">Progress so far</div>
-                            <p>
-                                At this early stage in the project, I've started by working on more manual methods for ball recognition as well as edge detection for the
-                                snooker table.
-
-                                The best ball recognition technique I've found so far is as follows:
-                                <ol>
-                                    <li>Convert the image to HSV, and extract only the Value.</li>
-                                    <li>Run an edge detection algorithm on the Value.</li>
-                                    <li>Run a circle Hough transform on the edge pixelmap.</li>
-                                </ol>
-
-                                This has yielded some very good results as seen below:
-                                <figure>
-                                    <img src="images/snooker-balls.png"
-                                        alt="A screenshot of the ball detection algorithm">
-                                    <figcaption>
-                                        The result of the ball detection algorithm
-                                    </figcaption>
-                                </figure>
-
-                                The current edge detection technique is as follows, and the results can be seen in the image below:
-                                <ol>
-                                    <li>Run <a target="_blank" href="https://segment-anything.com/">SAM (Segment Anything Model, from Meta AI)</a> on the image
-                                        with rough prompts as to where the green section of the table is. This creates a segmentation mask.</li>
-                                    <li>Run a Hough line transform on the image to select the rough edges (SAM doesn't perfectly find the boundaries in the image).</li>
-                                    <li>Dilate the mask and apply that to the colour image.</li>
-                                    <li>Run a Hough line transform on the masked colour image with a very low threshold.</li>
-                                    <li>Find the Hough lines from the colour image which are most similar to those from the SAM mask.</li>
-                                </ol>
-
-                                While this yields very good results, SAM is very resource intensive to run on a single image, and only runs in python. It was initially
-                                considered an option to host this on a server as an API which the app would send the image to. This has been discarded due to the expense
-                                of running high performance code on a hired server. The next approach to try is to use a neural net to identify approximate corner locations,
-                                then use the same dilation and colour Hough transform as described above to refine the search.
-                            
-                                <figure>
-                                    <img src="images/snooker-edges.png"
-                                        alt="A screenshot of the edge detection algorithm">
-                                    <figcaption>
-                                        The result of the edge detection algorithm
-                                    </figcaption>
-                                </figure>
-                            </p>
-                            
-                            <div class="mini_header">Further development</div>
-                            <p>
-                                This project is very much still in development, and will be until at least the end of this academic year, when the report deadline is.
-                            </p>
-                            <p>
-                                I'm still yet to create a nice UI for this app. I plan to create an app for this; possibly creating something in Unity, making release to
-                                both iOS/iPadOS and Android much easier. Mobile is the ideal platform for this because every phone/tablet has a camera and a screen,
-                                and is portable, making it ideal for this application. A desktop app will most likely be created for ease of development, and for more
-                                permanent setups; eg if a coach works full time on a given table.
-                            </p>
-                            <p>
-                                I'd also like to add the ability to track player accuracy. This would take the form of leaving the app to "watch" the player during a 
-                                practice session, taking note of each shot played, and the accuracy with which it was played. Ideally this process would be fully
-                                automated, allowing the app to be ignored and minimally impede the practice session. At the end, the player would receive a report
-                                including their strengths and weaknesses; for example, it would highlight if the player were consistently missing a single type of shot,
-                                or if they were consistently missing left/right or thick/thin. At this point it would be fairly easy to implement automatic scoring, at
-                                least for potting points. Once these have been implemented, I believe the software would be compellingly marketable.
-                            </p>
-
-                            <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/4yp-snooker-aide">GitHub page</a></div>
                         </div>
                     </div>
 
