@@ -394,5 +394,8 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
-# JetBrains Rider
+# JetBrains
 *.sln.iml
+.idea
+
+.DS_Store

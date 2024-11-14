@@ -18,6 +18,8 @@
                 <a target="_blank" href="https://www.linkedin.com/in/alistair-white-horne-4592bb200/">LinkedIn</a>
                 <span class="cdot">•</span>
                 <a target="_blank" href="https://www.facebook.com/alistair.wh/">Facebook</a>
+                <span class="cdot">•</span>
+                <a target="_blank" href="https://drive.google.com/file/d/1hpAn3c5IzuSpm6_vsHPc-PJvuLAfi3Id/view?usp=sharing">CV</a>
             </h2>
 
             <div class="output_container_outer border main_frame">
@@ -55,7 +57,7 @@
 
                     <h3>Projects:</h3>
 
-                    <div class="description", style="margin-left: 2mm; margin-bottom: 4mm; text-align: center;">
+                    <div class="description" style="margin-left: 2mm; margin-bottom: 4mm; text-align: center;">
                         Click the projects below to see more information
                     </div>
 
@@ -189,7 +191,7 @@
                         <button class="collapsible">
                             Bish Bash COSHH
                             <div class="description">
-                                A website to help chemists create COSHH forms for their experiments 
+                                A website to help chemists create COSHH forms for their experiments
                             </div>
                         </button>
                         <div class="collapsible_content">
@@ -214,17 +216,69 @@
                                 codes (for example, rejecting "Causes skin irritation" when "Causes serious skin irritation" is also present), as well as tidying
                                 anomalous H-code formatting.
                             </p>
-                            
-                            
-                                
+
+
+
                             <figure>
                                 <a target="_blank" href="https://dapeef.github.io/coshh/">
                                     <img src="images/coshh.png" alt="Screenshot of Bish Bash COSHH">
                                 </a>
                                 <figcaption>A screenshot of the site. Click the image to try it out for yourself</figcaption>
                             </figure>
-                            
+
                             <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/bish-bash-coshh">GitHub page</a></div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Braille bellringing method reader -->
+                    <div class="collapsible_container">
+                        <button class="collapsible">
+                            Braille method reader for English church bell ringing (change ringing)
+                            <div class="description">
+                                A script to create STL files which can be 3D printed to help blind ringers learn methods
+                            </div>
+                        </button>
+                        <div class="collapsible_content">
+                            <div class="mini_header">Motivation</div>
+                            <p>
+                                <a target="_blank" href="https://en.wikipedia.org/wiki/Change_ringing">Change ringing</a> is an excellent hobby, and
+                                most ringers will agree that <a target="_blank" href="https://en.wikipedia.org/wiki/Method_ringing">method ringing</a>
+                                is the most engaging and entertaining part of the hobby. In order to take part in method ringing, it is necessary to
+                                learn methods, which are generally depicted using what we call a "blue line diagram". An example of this can be seen
+                                in the image below.
+
+                                I have a bell ringing friend who is also blind, which causes obvious problems for learning methods.
+                            </p>
+
+                            <div class="mini_header">Solution</div>
+                            <p>
+                                I have created a python script which is capable of creating an STL file containing a tactile version of the blue line diagram.
+
+                                It uses <a target="_blank" href="https://complib.org/">CompLib</a>'s API to get the required information about the method,
+                                then uses this to create a "card" with the blue line raised to allow it to be parsed by touch only. This can be seen in the images below.
+
+                                There are a large number of different parameters (eg <code>width</code>, <code>height</code>, <code>line_height</code>, <code>line_profile</code>, etc.).
+                                These were fine-tuned over several revisions by comparing and discussing different configurations with my friend.
+                            </p>
+
+                            <figure>
+                                <img src="images/cambridge-2nds-place-bell.png" alt="The blue line for 2nd's place bell in Cambridge Surprise Major" style="width: 170px">
+                                <figcaption>The blue line for 2nd's place bell in Cambridge Surprise Major</figcaption>
+                            </figure>
+
+                            <figure>
+                                <img src="images/braille-method-screenshot.png" alt="The STL file created by the script">
+                                <figcaption>The STL file created by the script</figcaption>
+                            </figure>
+
+                            <figure>
+                                <img src="images/braille-method-photo.jpg" alt="The final 3D printed version">
+                                <figcaption>The final 3D printed version</figcaption>
+                            </figure>
+
+                            <div class="mini_header"><a target="_blank" href="https://github.com/dapeef/braille-method-reader">GitHub page</a></div>
                         </div>
                     </div>
 
